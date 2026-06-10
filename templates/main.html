@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block title %}Expense Tracker {% endblock %} {%
+block content %}
+<h1 style="color: deepskyblue">WELCOME TO EXPENSE TRACKER !</h1>
+<h2 style="color: #20afdf">{{welcome}}</h2>
+<br />
+<button type="button">
+  <a style="color: rgb(26, 157, 157)" href="/add_expense">1.Add Expense ➕</a>
+</button>
+<br />
+<br />
+
+<button type="button">
+  <a style="color: rgb(26, 157, 157)" href="/view_expense">2.View Expense 📋</a>
+</button>
+<br /><br />
+<button type="button">
+  <a style="color: rgb(26, 157, 157)" href="/delete_expense"
+    >3.Delete Expense 🗑️</a
+  >
+</button>
+<br /><br />
+<button
+  type="submit"
+  class="btn-danger"
+  onclick="return confirm('Sure Wanna Exit ?');"
+>
+  <a style="color: rgb(26, 157, 157)" href="/exit">4.Exit 🚪</a>
+</button>
+<br /><br />
+{% endblock %}

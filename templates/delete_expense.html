@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block title %}Delete Expense {% endblock %} {%
+block content %}
+<h1 style="color: rgb(6, 108, 30); block-size: auto">🗑️ DELETE EXPENSE</h1>
+<h3 style="color: rgb(6, 108, 30); block-size: auto">
+  You can press Delete to remove any expense 👇🏻
+</h3>
+<table border="3" style="border-color: rgb(27, 165, 59)">
+  <thead>
+    <tr style="color: rgb(6, 108, 30)">
+      <th>Item</th>
+      <th>Amount</th>
+      <th>Category</th>
+      <th>Date</th>
+      <th style="text-align: center"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for e in expenses%}
+
+    <tr style="color: rgb(13, 66, 57)">
+      <td>{{e['Item']}}</td>
+      <td>{{e['Amount']}}</td>
+      <td>{{e['Category']}}</td>
+      <td>{{e['Date']}}</td>
+      <td style="text-align: center">
+        <form action="/delete_expense" method="POST" style="display: inline">
+          <input type="hidden" name="index" value="{{loop.index0}}" />
+          <button
+            type="submit"
+            style="color: red"
+            onclick="return confirm('Delete this expense?');"
+          >
+            Delete
+          </button>
+        </form>
+      </td>
+    </tr>
+    {% endfor%}
+  </tbody>
+</table>
+<br />
+<a style="color: rgb(60, 150, 103)" href="/main">Back</a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %}Sign In {% endblock %} {% block
+content %}
+
+<h1 style="color: rgb(6, 108, 30); block-size: auto">Sign In page</h1>
+<form method="post" action="/sign_in">
+  <input type="text" name="username" placeholder="Enter Name" required />
+  <input
+    type="password"
+    name="password"
+    placeholder="Enter password"
+    required
+  />
+  <button type="submit">Log In</button>
+</form>
+<br />
+<a style="color: rgb(60, 150, 103)" href="/">Back</a>
+{% endblock %}

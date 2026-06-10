@@ -1,0 +1,35 @@
+{
+    "dhananjay": {
+        "password": "123",
+        "expenses": [
+            {
+                "Item": "Coffee",
+                "Amount": "460",
+                "Category": "Food & Drink",
+                "Date": "2026-05-31"
+            },
+            {
+                "Item": "Uber",
+                "Amount": "200",
+                "Category": "Transport",
+                "Date": "2026-05-31"
+            },
+            {
+                "Item": "Laddu",
+                "Amount": "500",
+                "Category": "Food & Drink",
+                "Date": "2026-05-30"
+            },
+            {
+                "Item": "prasad",
+                "Amount": "501",
+                "Category": "Food & Drink",
+                "Date": "2026-06-01"
+            }
+        ]
+    },
+    "radha": {
+        "password": "123",
+        "expenses": []
+    }
+}
